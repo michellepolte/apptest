@@ -1,0 +1,181 @@
+    1  lab-configure 
+    2  source /usr/local/etc/ocp4.config 
+    3  env | grep NEXUS
+    4  set | grep NEXUS
+    5  lab multicontainer-design start
+    6  cd DO180/solutions/multicontainer-design/deploy/nodejs/
+    7  ls -ltr
+    8  cat Containerfile 
+    9  cat build.sh 
+   10  cat run.sh 
+   11  cd nodejs-source/
+   12  sudo podman build -t do180-nodejs .
+   13  cd ..
+   14  ls -ltr
+   15  sudo podman build -t do180-nodejs .
+   16  sudo podman login registry.redhat.io
+   17  sudo podman build -t do180-nodejs .
+   18  sudo podman login registry.redhat.io
+   19  cat Cona
+   20  cat Containerfile 
+   21  sudo podman login registry.redhat.io
+   22  sudo podman search rhel
+   23  sudo podman logout
+   24  sudo podman logout registry.redhat.io
+   25  sudo podman login registry.redhat.io
+   26  sudo podman build -t do180-nodejs .
+   27  sudo podman login registry.redhat.com
+   28  cat Containerfile 
+   29  set | grep NEXUS
+   30  ls -ltr
+   31  cat build.sh 
+   32  lab multicontainer-design finish
+   33  lab troubleshoot-s2i start
+   34  cd ..
+   35  pwd
+   36  cd /home/student/
+   37  ls -ltr
+   38  lab troubleshoot-s2i start
+   39  ls -ltr /home/student/DO180/
+   40  lab troubleshoot-container start
+   41  cd DO180/labs/troubleshoot-container/conf/
+   42  ls -ltr
+   43  cat httpd.conf 
+   44  cat httpd.conf | grep -v "#"
+   45  ls -ltr
+   46  ls -ltr extra/
+   47  cd ..
+   48  ls -ltr
+   49  cat build.sh 
+   50  cat Dockerfile 
+   51  ls -ltr src/
+   52  lab troubleshoot-container finish
+   53  lab troubleshoot-container start
+   54  ls -ltr
+   55  sudo podman build --laysers=false -t do180-trouble .
+   56  sudo podman build --layers=false -t do180-trouble .
+   57  sudo podman images
+   58  sudo podman tag do180-trouble quay.io/m_polte/do180-troubles
+   59  sudo podman push quay.io/m_polte/do180-troubles
+   60  sudo podman login quay.io
+   61  sudo podman push quay.io/m_polte/do180-troubles
+   62  cat Dockerfile 
+   63  ls -ltr
+   64  cat build.sh 
+   65  lab troubleshoot-container finish
+   66  cd ..
+   67  lab comprehensive-review start
+   68  cd comprehensive-review/image/
+   69  ls -ltr
+   70  cat get-nexus-bundle.sh 
+   71  cat nexus-start.sh 
+   72  cat ../deploy/local/run-persistent.sh 
+   73  cat ../deploy/openshift/resources/nexus-deployment.yaml 
+   74  ls -ltr
+   75  cd ../deploy/
+   76  ls -ltr
+   77  cat local/run-persistent.sh 
+   78  lab comprehensive-review finish
+   79  lab appendix-microservices start
+   80  cd ..
+   81  ls -ltr
+   82  cd appendix-microservices/
+   83  ls -ltr
+   84  cat images/cleanup.sh 
+   85  cat deploy/nodejs/build.sh 
+   86  cat deploy/nodejs/linked/run.sh 
+   87  cat deploy/html5/build.sh 
+   88  cat deploy/html5/Containerfile 
+   89  tree
+   90  cat deploy/nodejs/linked/db.sql 
+   91  cd ..
+   92  ls -ltr
+   93  ls -ltr labs/troubleshoot-container/
+   94  lab troubleshoot-container start
+   95  lab comprehensive-review start
+   96  lab multicontainer-design start
+   97  lab troubleshoot-s2i start
+   98  ls -ltr /home/student/
+   99  git init
+  100  rm -rf .git
+  101  git remote add origin https://github.com/michellepolte/apptest.git
+  102  git init
+  103  git commit -m "first commit"
+  104  git branch -M main
+  105  git remote add origin https://github.com/michellepolte/apptest.git
+  106  git branch -M main
+  107  git branch -M maaster
+  108  git status
+  109  git push -u origin main
+  110  git add .
+  111  git commit -m "new commit"
+  112  git push .
+  113  git status
+  114  git push -u origin master
+  115  lab troubleshoot-review start
+  116  git clone https://github.com/michellepolte/DO180-apps
+  117  lab troubleshoot-review start
+  118  git status
+  119  ls -ltr
+  120  cd ..
+  121  git clone https://github.com/michellepolte/DO180-apps
+  122  ls -ltr
+  123  lab troubleshoot-s2i start
+  124  rsync -avAH DO180-apps/ DO180/DO180-apps/
+  125  cd DO180
+  126  git status
+  127  git add .
+  128  rm -rf DO180-apps/.git
+  129  git status
+  130  ls -ltr
+  131  git add .
+  132  git status
+  133  git commit -m "changes"
+  134  git push
+  135  rsync -avAH ../DO180-apps/ DO180-apps/
+  136  rm -rf DO180-apps/.git
+  137  git status
+  138  ls -ltr DO180-apps/
+  139  cd ..
+  140  git status
+  141  cd DO180-apps/
+  142  git status
+  143  cd ..
+  144  lab troubleshoot-review start
+  145  cd DO180
+  146  git status
+  147  git add .
+  148  git commit -m "new changes"
+  149  git push
+  150  lab linking-containers start
+  151  lab mysql-openshift start
+  152  lab openshift-resources start
+  153  lab openshift-review start
+  154  lab openshift-routes start
+  155  lab openshift-s2i start
+  156  git add .
+  157  git commit -m "new"
+  158  git status
+  159  ls -ltr
+  160  ls -ltr labs/
+  161  ls -ltr ../
+  162  lab dockerfile-create start
+  163  lab dockerfile-review start
+  164  ls -ltr
+  165  lab multicontainer-application start
+  166  lab multicontainer-openshift start
+  167  lab multicontainer-review start
+  168  lab image-operations start
+  169  lab image-review start
+  170  lab manage-lifecycle start
+  171  lab manage-networking start
+  172  lab manage-review start
+  173  lab manage-storage start
+  174  ls -ltr
+  175  ls -ltr labs/
+  176  lab container-create start
+  177  lab container-review start
+  178  lab image-operations start
+  179  lab image-review start
+  180  ls -ltr labs/
+  181  history > history.txt
